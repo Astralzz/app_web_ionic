@@ -1,0 +1,84 @@
+//IMPORTANTE
+1: importar react en los tsx
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+2: No ejecutar 
+ npm audit fix --force
+
+//OTROS
+
+1:Templates
+Ionic Angular
+Starter	Description
+tabs	A starting project with a simple tabbed interface
+blank	A blank starter project
+sidemenu	A starting project with a side menu with navigation in the content area
+super	A starting project complete with pre-built pages, providers and best practices for Ionic development.
+conference	A project that demonstrates a realworld application
+tutorial	A tutorial based project that goes along with the Ionic documentation
+aws	AWS Mobile Hub Starter
+
+2: descargar node modules
+npm i
+
+3: iniciar servidor de react
+npm run start
+
+4:poner proyecto para producción
+ionic build
+
+5: poder ejecutar proyecto desde react
+npm run build
+
+//CREAR PROYECTO
+1: instalar ionic (-g/global)
+npm install -g @ionic/cli
+
+2: crear proyecto
+ionic start proyecto1 ?template_a_usar --type=react
+ionic start plantilla1 sidemenu --type=react
+ionic start plantilla1_cordova sidemenu --type=react
+ionic start app_web sidemenu --type=react
+
+3: integrar capasitor
+cd nombre_proyecto
+ionic integrations enable capacitor ... activar
+ionic integrations disable capacitor ... desactivar
+
+4: integrar android e ios
+ionic capacitor add android
+ionic capacitor add ios
+
+//PARA PRODUCCIÓN
+1: build
+ionic build
+
+2: Se puede hacer al final la integración
+ionic capacitor add android
+ionic capacitor add ios
+
+3: copiar datos
+ionic cap copy
+
+4: sincronizar
+ionic cap sym
+npx cap sync
+
+5: Abrir android
+ionic cap open android
+
+//CREAR PROYECTO SIN REACT Y CON CORDOVA
+1: ionic start plantilla1_cordova sidemenu
+ionic start plantilla1_cordova sidemenu
+
+ionic start miAplicacion sidemenu .... Creamos la aplicación Ionic
+
+cd miAplicacion .... Entramos en el directorio de la aplicación.
+
+ionic cordova platform add android .... Añadimos la plataforma Andro
+
+
+Cuando hayas preparado tu teléfono, recuerda conectarlo por USB a tu ordenador, y entonces ejecuta este comando:
+
+ionic cordova run android

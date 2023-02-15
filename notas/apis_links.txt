@@ -1,0 +1,35 @@
+APIS DE CAPACITOR USADAS:
+
+  1_ Camara:
+
+    link:
+      https://capacitorjs.com/docs/apis/camera
+
+    poner en AndroidManifest.xml:
+      <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+      <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  
+  2_ Browser:
+
+    link:
+      https://capacitorjs.com/docs/apis/browser
+
+  3_ Cookies:
+
+    link:
+      https://capacitorjs.com/docs/apis/cookies
+
+  4_ Red
+
+    link:
+    https://capacitorjs.com/docs/apis/network
+
+  5_ Localizacion:
+
+    link:
+      https://capacitorjs.com/docs/apis/geolocation
+
+    poner en AndroidManifest.xml:
+      <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+      <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+      <uses-feature android:name="android.hardware.location.gps" />
