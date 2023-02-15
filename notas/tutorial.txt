@@ -1,84 +1,92 @@
-//IMPORTANTE
-1: importar react en los tsx
-import React from 'react';
-import ReactDOM from 'react-dom';
+COMO CREAR APPS EN IONIC
 
-2: No ejecutar 
- npm audit fix --force
+1_  Instalar ionic (-g/global):
+      
+      En consola:
+        npm install -g @ionic/cli
 
-//OTROS
+2_ Crear proyecto de ionic con react
 
-1:Templates
-Ionic Angular
-Starter	Description
-tabs	A starting project with a simple tabbed interface
-blank	A blank starter project
-sidemenu	A starting project with a side menu with navigation in the content area
-super	A starting project complete with pre-built pages, providers and best practices for Ionic development.
-conference	A project that demonstrates a realworld application
-tutorial	A tutorial based project that goes along with the Ionic documentation
-aws	AWS Mobile Hub Starter
+      En consola
+        ionic start "nombre_app" --type=react
+      Usando un template:
+        ionic start "nombre_app" "nombre_del_template" --type=react
+      Ejemplo:
+        ionic start app_web sidemenu --type=react
 
-2: descargar node modules
-npm i
+3_  Integrar capacitor:
+      
+      En consola:
+        Activar:
+          ionic integrations enable capacitor  
+        Desactivar:
+          ionic integrations disable capacitor
 
-3: iniciar servidor de react
-npm run start
-
-4:poner proyecto para producción
-ionic build
-
-5: poder ejecutar proyecto desde react
-npm run build
-
-//CREAR PROYECTO
-1: instalar ionic (-g/global)
-npm install -g @ionic/cli
-
-2: crear proyecto
-ionic start proyecto1 ?template_a_usar --type=react
-ionic start plantilla1 sidemenu --type=react
-ionic start plantilla1_cordova sidemenu --type=react
-ionic start app_web sidemenu --type=react
-
-3: integrar capasitor
-cd nombre_proyecto
-ionic integrations enable capacitor ... activar
-ionic integrations disable capacitor ... desactivar
-
-4: integrar android e ios
-ionic capacitor add android
-ionic capacitor add ios
-
-//PARA PRODUCCIÓN
-1: build
-ionic build
-
-2: Se puede hacer al final la integración
-ionic capacitor add android
-ionic capacitor add ios
-
-3: copiar datos
-ionic cap copy
-
-4: sincronizar
-ionic cap sym
-npx cap sync
-
-5: Abrir android
-ionic cap open android
-
-//CREAR PROYECTO SIN REACT Y CON CORDOVA
-1: ionic start plantilla1_cordova sidemenu
-ionic start plantilla1_cordova sidemenu
-
-ionic start miAplicacion sidemenu .... Creamos la aplicación Ionic
-
-cd miAplicacion .... Entramos en el directorio de la aplicación.
-
-ionic cordova platform add android .... Añadimos la plataforma Andro
+4_  Integrar ios y android:
+      
+      En consola:
+        Ios:
+          ionic capacitor add ios
+        Android:
+          ionic capacitor add android
 
 
-Cuando hayas preparado tu teléfono, recuerda conectarlo por USB a tu ordenador, y entonces ejecuta este comando:
 
-ionic cordova run android
+PONER PROYECTO PARA PRODUCCIÓN
+
+1_  Poner para producción web:
+      
+      En consola:
+        ionic build | npm build
+
+2_  Integrar ios y android:
+      
+      En consola:
+        Ios:
+          ionic capacitor add ios
+        Android:
+          ionic capacitor add android
+
+3_  Copear datos:
+      
+      En consola:
+        ionic cap copy
+
+4_  Sincronizar datos:
+      
+      En consola:
+        ionic cap sym | ionic cap sym
+
+5_  Abrir android estudio para crear apk:
+      
+      En consola:
+        ionic cap open android
+
+
+
+COMANDOS VARIOS
+
+1_  Si descargarte un proyecto de GitHub:
+      
+      En consola:
+        npm i
+
+2_  Iniciar servidor npm/react:
+      
+      En consola:
+        npm run start
+
+
+
+DATOS IMPORTANTES
+
+1_ Importar react en los tsx
+      
+    import React from 'react';
+    import ReactDOM from 'react-dom';
+
+2_ No ejecutar (aunque lo diga en consola) daña el proyecto:
+    
+    npm audit fix --force
+
+
