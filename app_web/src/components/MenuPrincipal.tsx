@@ -128,7 +128,7 @@ const etiquetas: Etiqueta[] = [
   {
     titulo: "Link del proyecto",
     icono: logoGithub,
-    url: "https://twitter.com/app/uagro_mx?lang=es",
+    url: "https://github.com/Astralzz/app_web_ionic.git",
   },
 ];
 
